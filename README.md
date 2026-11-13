@@ -80,7 +80,19 @@ lumora-scout/
 ├── LICENSE                        # MIT License
 ├── .gitignore                     # Git ignore rules
 ├── .editorconfig                  # Editor formatting rules
-├── docs/                          # Comprehensive technical specifications
+├── requirements.txt               # Global dependencies for easy installation
+├── documentation/                 # Comprehensive documentation suite & file guides
+│   ├── INDEX.md                   # Master documentation hub and system guide
+│   ├── RAG_SYSTEM.md              # Deep dive into RAG pipeline & vector search
+│   ├── GUARDRAILS_SYSTEM.md       # Deep dive into 4-layer defense-in-depth security
+│   ├── AGENT_GRAPH_SYSTEM.md      # Deep dive into LangGraph multi-agent orchestration
+│   ├── TOOLS_AND_SCRAPERS.md      # Deep dive into scrapers and external data tools
+│   ├── LLM_AND_PROMPTS.md         # Deep dive into fallback gateway & prompts
+│   ├── API_AND_STREAMING.md       # Deep dive into FastAPI routes & SSE streaming
+│   ├── PERSISTENCE_AND_CACHE.md   # Deep dive into SQLite checkpointer & cache
+│   └── FRONTEND_AND_3D.md         # Deep dive into React + Three.js 3D visual arena
+├── docs/                          # Original technical specifications & blueprints
+│   ├── README.md                  # Documentation directory overview
 │   ├── ARCHITECTURE.md            # System architecture blueprint
 │   ├── AGENT_GRAPH.md             # LangGraph state machine & Mermaid graph
 │   ├── STREAMING_AND_HITL.md      # SSE protocol & human-in-the-loop specification
@@ -139,8 +151,20 @@ cp frontend/.env.example frontend/.env
 
 Edit `backend/.env` with your API credentials (refer to [MODELS_AND_KEYS.md](docs/MODELS_AND_KEYS.md) for free-tier instructions).
 
-### 2. Backend Setup (`uv`)
+### 2. Backend Setup
 
+You can use either the global `requirements.txt` or the `uv` toolchain:
+
+#### Option A: Global / Virtualenv pip install
+```bash
+# Install all dependencies with pip
+pip install -r requirements.txt
+
+# Start the FastAPI server
+python -m uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+#### Option B: Using `uv`
 ```bash
 cd backend
 

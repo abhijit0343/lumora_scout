@@ -1,0 +1,59 @@
+# ==============================================================================
+# Lumora Scout - Global Python Dependencies
+# ==============================================================================
+# Install all dependencies into any environment:
+#   pip install -r requirements.txt
+# ==============================================================================
+
+# --- FastAPI & Web Framework ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.12
+sse-starlette>=2.1.3
+slowapi>=0.1.9
+
+# --- Core Configuration & HTTP ---
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+httpx>=0.27.2
+tldextract>=5.1.2
+
+# --- LangChain & LangGraph Multi-Agent Runtime ---
+langgraph>=0.2.40
+langgraph-checkpoint-sqlite>=2.0.1
+langchain-core>=0.3.15
+langchain-community>=0.3.5
+
+# --- LLM Provider Integrations (Resilient Gateway) ---
+google-genai>=0.1.1
+langchain-google-genai>=2.0.4
+langchain-groq>=0.2.1
+langchain-openai>=0.2.4
+langchain-ollama>=0.2.0
+
+# --- Embeddings & RAG Vector Search (EmbeddingGemma 2) ---
+# Note: verify EmbeddingGemma 2 loading on its model card
+sentence-transformers>=3.2.1
+transformers>=4.46.0
+huggingface-hub>=0.26.0
+torch>=2.2.0
+faiss-cpu>=1.9.0
+rank-bm25>=0.2.2
+networkx>=3.4.2
+pillow>=11.0.0
+
+# --- Document Loaders & Ingestion ---
+pypdf>=5.1.0
+python-docx>=1.1.2
+
+# --- Web Scraping & External Tools ---
+trafilatura>=1.12.2
+playwright>=1.48.0
+tavily-python>=0.5.0
+google-play-scraper>=1.2.4
+
+# --- Developer & Testing Tools ---
+pytest>=8.3.3
+pytest-asyncio>=0.24.0
+ruff>=0.7.2
+mypy>=1.13.0
