@@ -1,0 +1,51 @@
+[project]
+name = "lumora-scout"
+version = "0.1.0"
+description = "Agentic AI website & product capability comparison engine with HITL, SSE streaming, RAG, and 4-layer guardrails"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+    "pydantic-settings",
+    "langgraph",
+    "langgraph-checkpoint-sqlite",
+    "langchain-core",
+    "langchain-community",
+    "google-genai",
+    "langchain-google-genai",
+    "langchain-groq",
+    "langchain-openai",
+    "langchain-ollama",
+    "huggingface-hub",
+    "transformers",
+    # verify EmbeddingGemma 2 loading on its model card
+    "sentence-transformers",
+    "pillow",
+    "faiss-cpu",
+    "rank-bm25",
+    "networkx",
+    "pypdf",
+    "python-docx",
+    "httpx",
+    "trafilatura",
+    "playwright",
+    "tldextract",
+    "slowapi",
+    "sse-starlette",
+    "tavily-python",
+    "google-play-scraper",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+    "mypy",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

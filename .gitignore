@@ -1,0 +1,24 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Node dependencies and build output
+node_modules/
+dist/
+
+# Python virtual environment and cache
+.venv/
+__pycache__/
+*.py[cod]
+
+# SQLite database files
+*.sqlite
+
+# Backend runtime data directories (preserve .gitkeep)
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep
+backend/data/indexes/*
+!backend/data/indexes/.gitkeep
+backend/data/cache/*
+!backend/data/cache/.gitkeep
